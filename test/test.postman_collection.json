@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "191cc225-6dd2-4b94-8c32-b50ff10970b6",
+		"name": "lab13_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30659634"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/students",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"id\":1,\"description\":\"Food\"}, {\"id\":\"2\", \"description\": \"Clothe\"}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/students"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/students/2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/students/2"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/students",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\": 5, \"name\":\"Tomboy\", \"program\":\"MBA\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/students"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/students/4",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/students/4"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/students/",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Bob BIG\", \"program\":\"MBA\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/students/2"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/students/search?program=ComPro",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/students/search?program=ComPro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students",
+						"search"
+					],
+					"query": [
+						{
+							"key": "program",
+							"value": "ComPro"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
